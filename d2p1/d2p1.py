@@ -1,6 +1,6 @@
 num_of_safe = 0
 
-def is_safe_increasing(report: list[int]) -> int: 
+def is_safe_increasing(report: list[str]) -> int: 
     for i in range(len(report)-1):
         if int(report[i+1]) in range(int(report[i])+1, int(report[i])+4):
             continue
@@ -8,7 +8,7 @@ def is_safe_increasing(report: list[int]) -> int:
             return 0
     return 1
 
-def is_safe_decreasing(report: list[int]) -> int: 
+def is_safe_decreasing(report: list[str]) -> int: 
     for i in range(len(report)-1):
         if int(report[i+1]) in range(int(report[i])-3, int(report[i])):
             continue
@@ -16,7 +16,7 @@ def is_safe_decreasing(report: list[int]) -> int:
             return 0
     return 1
 
-def is_safe(report: list[int]) -> int:
+def is_safe(report: list[str]) -> int:
     return is_safe_increasing(report) + is_safe_decreasing(report)
 
 with open("./d2p1/input.txt", "rt") as file:
