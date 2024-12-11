@@ -29,6 +29,7 @@ def find_xmas(data):
     
     return count
 
+#chose to use np array because of convenient genfromtxt function and fixed length per line
 data = np.genfromtxt('./d4p1/input.txt', dtype=str, delimiter=1)
 print(find_xmas(data))
 
